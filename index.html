@@ -1,598 +1,1248 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
-  xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-6">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title>MainTable</title>
 
-  <meta name="color-scheme" content="light dark" />
-  <meta name="supported-color-schemes" content="light dark" />
+    <style>
+        #outlook a {
+            padding: 0;
+        }
 
-  <title>Dugimail</title>
-  <style type="text/css">
-    /* шрифт только через импорт */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
 
-    /* обнуление стилей */
-    table {
-      border-spacing: 0;
-      mso-cellspacing: 0;
-      mso-padding-alt: 0;
-    }
+        .desk-hide {
+            display: none;
+            float: left;
+            overflow: hidden;
+            width: 0;
+            max-height: 0;
+            line-height: 0;
+            mso-hide: all;
+        }
 
-    td {
-      padding: 0;
-    }
+        .wth-100 {
+            width: 100%;
+        }
 
-    #outlook a {
-      padding: 0;
-    }
+        .wth-100,
+        .wth-100 p,
+        .wth-100 span,
+        .wth-100 font,
+        .wth-100 td,
+        .wth-100 div {
+            line-height: 100%;
+        }
 
-    a {
-      text-decoration: none;
-      color: #e8fbfa;
-      font-size: 16px;
-    }
+        body {
+            width: 100%;
+            font-family: Helvetica, 'Helvetica neue', Verdana, Arial, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            background-color: #fafafa;
+        }
+
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        table td,
+        html,
+        body,
+        .pm-0 {
+            padding: 0;
+            Margin: 0;
+        }
+
+        table tr {
+            border-collapse: collapse;
+        }
+
+        img {
+            display: block;
+            border: 0;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        s {
+            text-decoration: line-through;
+        }
+
+        p,
+        hr {
+            Margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            Margin: 0;
+            line-height: 120%;
+            mso-line-height-rule: exactly;
+            font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        }
+
+        p,
+        ul li,
+        ol li,
+        a {
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            mso-line-height-rule: exactly;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p,
+        ul li,
+        ol li {
+            font-family: Helvetica, 'Helvetica neue', Verdana, Arial, sans-serif;
+            line-height: 150%;
+        }
+
+        ul li,
+        ol li {
+            Margin-bottom: 15px;
+            margin-left: 0;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: normal;
+            color: #333333;
+        }
+
+        h2 {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            color: #333333;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: normal;
+            color: #333333;
+        }
+
+        .btn {
+            mso-style-priority: 100 !important;
+            text-decoration: none !important;
+        }
+
+        .btn-border:hover a.btn,
+        .btn-border:hover button.btn {
+            background: #ffffff !important;
+        }
+
+        .btn-border:hover {
+            background: #ffffff !important;
+            border-style: solid !important;
+            border-color: #563da3 !important;
+        }
+
+        .cs-content,
+        .cs-header,
+        .cs-footer {
+            table-layout: fixed !important;
+            /* display: none; */
+            width: 100%;
+        }
+
+        .ft-left {
+            float: left;
+        }
+
+        .ft-right {
+            float: right;
+        }
+
+        .cs-p5 {
+            padding: 5px;
+        }
+
+        .cs-p10 {
+            padding: 10px;
+        }
+
+        .cs-p15 {
+            padding: 15px;
+        }
+
+        .cs-p20 {
+            padding: 20px;
+        }
+
+        .cs-p25 {
+            padding: 25px;
+        }
+
+        .cs-p30 {
+            padding: 30px;
+        }
+
+        .cs-p35 {
+            padding: 35px;
+        }
+
+        .cs-p40 {
+            padding: 40px;
+        }
+
+        .cs-p5t {
+            padding-top: 5px;
+        }
+
+        .cs-p10t {
+            padding-top: 10px;
+        }
+
+        .cs-p15t {
+            padding-top: 15px;
+        }
+
+        .cs-p20t {
+            padding-top: 20px;
+        }
+
+        .cs-p25t {
+            padding-top: 25px;
+        }
+
+        .cs-p30t {
+            padding-top: 30px;
+        }
+
+        .cs-p35t {
+            padding-top: 35px;
+        }
+
+        .cs-p40t {
+            padding-top: 40px;
+        }
+
+        .cs-p5b {
+            padding-bottom: 5px;
+        }
+
+        .cs-p10b {
+            padding-bottom: 10px;
+        }
+
+        .cs-p15b {
+            padding-bottom: 15px;
+        }
+
+        .cs-p20b {
+            padding-bottom: 20px;
+        }
+
+        .cs-p25b {
+            padding-bottom: 25px;
+        }
+
+        .cs-p30b {
+            padding-bottom: 30px;
+        }
+
+        .cs-p35b {
+            padding-bottom: 35px;
+        }
+
+        .cs-p40b {
+            padding-bottom: 40px;
+        }
+
+        .cs-p5l {
+            padding-left: 5px;
+        }
+
+        .cs-p10l {
+            padding-left: 10px;
+        }
+
+        .cs-p15l {
+            padding-left: 15px;
+        }
+
+        .cs-p20l {
+            padding-left: 20px;
+        }
+
+        .cs-p25l {
+            padding-left: 25px;
+        }
+
+        .cs-p30l {
+            padding-left: 30px;
+        }
+
+        .cs-p35l {
+            padding-left: 35px;
+        }
+
+        .cs-p40l {
+            padding-left: 40px;
+        }
+
+        .cs-p5r {
+            padding-right: 5px;
+        }
+
+        .cs-p10r {
+            padding-right: 10px;
+        }
+
+        .cs-p15r {
+            padding-right: 15px;
+        }
+
+        .cs-p20r {
+            padding-right: 20px;
+        }
+
+        .cs-p25r {
+            padding-right: 25px;
+        }
+
+        .cs-p30r {
+            padding-right: 30px;
+        }
+
+        .cs-p35r {
+            padding-right: 35px;
+        }
+
+        .cs-p40r {
+            padding-right: 40px;
+        }
+
+        .cs-menu td {
+            border: 0;
+        }
+
+        .cs-menu td a img {
+            display: inline-block !important;
+        }
+
+        .cs-menu td a {
+            text-decoration: none;
+            display: block;
+            font-family: Helvetica, 'Helvetica neue', Verdana, Arial, sans-serif;
+        }
+
+        .pm-0 {
+            width: 100%;
+            height: 100%;
+            background-repeat: repeat;
+            background-position: center top;
+        }
+
+        .pm-0-color,
+        .pm-0 {
+            background-color: #fafafa;
+            /* display: none; */
+        }
+
+        .cs-header {
+            background-color: transparent;
+            background-repeat: repeat;
+            background-position: center top;
+        }
+
+        .cs-header-body {
+            background-color: #ffffff;
+        }
+
+        .cs-content-body {
+            background-color: #ffffff;
+        }
+
+        .cs-footer {
+            background-color: transparent;
+            background-repeat: repeat;
+            background-position: center top;
+        }
+
+        .cs-footer-body {
+            background-color: transparent;
+        }
+
+        .cs-header-body p,
+        .cs-header-body ul li,
+        .cs-header-body ol li {
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .cs-header-body a {
+            color: #1376c8;
+            font-size: 14px;
+        }
+
+        .cs-content-body p,
+        .cs-content-body ul li,
+        .cs-content-body ol li {
+            color: #666666;
+            font-size: 16px;
+        }
+
+        .cs-content-body a {
+            color: #1dcfcf;
+            font-size: 16px;
+        }
+
+        .cs-footer-body p,
+        .cs-footer-body ul li,
+        .cs-footer-body ol li {
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .cs-footer-body a {
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .cs-infoblock a {
+            font-size: 12px;
+            color: #cccccc;
+        }
+
+        .cs-infoblock,
+        .cs-infoblock p,
+        .cs-infoblock ul li,
+        .cs-infoblock ol li {
+            line-height: 120%;
+            font-size: 12px;
+            color: #cccccc;
+        }
+
+        .cs-header-body h1 a,
+        .cs-content-body h1 a,
+        .cs-footer-body h1 a {
+            font-size: 20px;
+        }
+
+        .cs-header-body h2 a,
+        .cs-content-body h2 a,
+        .cs-footer-body h2 a {
+            font-size: 14px;
+        }
+
+        .cs-header-body h3 a,
+        .cs-content-body h3 a,
+        .cs-footer-body h3 a {
+            font-size: 20px;
+        }
+
+        a.btn,
+        button.btn {
+            display: inline-block;
+            background: #ffffff;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: Helvetica, 'Helvetica neue', Verdana, Arial, sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            line-height: 120%;
+            color: #563da3;
+            text-decoration: none;
+            width: auto;
+            text-align: center;
+            padding: 15px 20px 15px 20px;
+            mso-padding-alt: 0;
+            mso-border-alt: 10px solid #ffffff;
+        }
+
+        .btn-border {
+            border-style: solid;
+            border-color: #563da3;
+            background: #ffffff;
+            border-width: 2px 2px 2px 2px;
+            display: inline-block;
+            border-radius: 10px;
+            width: auto;
+        }
+
+        @media only screen and (min-width: 900px) {
+
+            p,
+            ul li,
+            ol li,
+            a {
+                line-height: 150% !important;
+            }
 
 
-    @media screen and (max-width: 599.98px) {}
+            h1,
+            h2,
+            h3,
+            h1 a,
+            h2 a,
+            h3 a {
+                line-height: 120% !important;
+            }
 
-    @media screen and (max-width: 399.98px) {
-      .mobile-padding {
-        padding-right: 10px !important;
-        padding-left: 10px !important;
-      }
+            h1 {
+                font-size: 20px !important;
+                text-align: center;
+            }
 
-      .mobile-col-padding {
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-      }
+            h2 {
+                font-size: 16px !important;
+                text-align: left;
+            }
 
-      .two-columns .column {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
+            h3 {
+                font-size: 20px !important;
+                text-align: center;
+            }
 
-      .two-columns .column img {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
+            h2 a {
+                text-align: left;
+            }
 
-      .three-columns .column {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
+            .cs-header-body h1 a,
+            .cs-content-body h1 a,
+            .cs-footer-body h1 a {
+                font-size: 20px !important;
+            }
 
-      .three-columns .column img {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
+            .cs-header-body h2 a,
+            .cs-content-body h2 a,
+            .cs-footer-body h2 a {
+                font-size: 16px !important;
+            }
 
-      .fourth-columns .column {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
+            .cs-header-body h3 a,
+            .cs-content-body h3 a,
+            .cs-footer-body h3 a {
+                font-size: 20px !important;
+            }
 
-      .fourth-columns .column img {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-    }
+            .cs-menu td a {
+                font-size: 14px !important;
+            }
 
-    /* Custom Dark Mode Colors */
-    :root {
-      color-scheme: light dark;
-      supported-color-schemes: light dark;
-    }
+            .cs-header-body p,
+            .cs-header-body ul li,
+            .cs-header-body ol li,
+            .cs-header-body a {
+                font-size: 10px !important;
+            }
 
-    @media (prefers-color-scheme: dark) {
+            .cs-content-body p,
+            .cs-content-body ul li,
+            .cs-content-body ol li,
+            .cs-content-body a {
+                font-size: 16px !important;
+            }
 
-      table,
-      td {
-        background-color: #06080B !important;
-      }
+            .cs-footer-body p,
+            .cs-footer-body ul li,
+            .cs-footer-body ol li,
+            .cs-footer-body a {
+                font-size: 12px !important;
+            }
 
-      h1,
-      h2,
-      h3,
-      p {
-        color: #ffffff !important;
-      }
-    }
-  </style>
+            .cs-infoblock p,
+            .cs-infoblock ul li,
+            .cs-infoblock ol li,
+            .cs-infoblock a {
+                font-size: 12px !important;
+            }
 
-  <!--[if (gte mso 9)|(IE)]>
-    <style type="text/css">
-      table {border-collapse: collapse !important;}
+            .cs-m-txt-c,
+            .cs-m-txt-c h1,
+            .cs-m-txt-c h2,
+            .cs-m-txt-c h3 {
+                text-align: center !important;
+            }
+
+            .cs-m-txt-r,
+            .cs-m-txt-r h1,
+            .cs-m-txt-r h2,
+            .cs-m-txt-r h3 {
+                text-align: right !important;
+            }
+
+            .cs-m-txt-l,
+            .cs-m-txt-l h1,
+            .cs-m-txt-l h2,
+            .cs-m-txt-l h3 {
+                text-align: left !important;
+            }
+
+            .cs-m-txt-r img,
+            .cs-m-txt-c img,
+            .cs-m-txt-l img {
+                display: inline !important;
+            }
+
+            .btn-border {
+                /* display: none !important; */
+            }
+
+            a.btn,
+            button.btn {
+                font-size: 14px !important;
+                display: inline-block !important;
+                /* border-left-width: 0px !important; */
+                /* border-right-width: 0px !important; */
+            }
+
+            .cs-btn-fw {
+                border-width: 10px 0px !important;
+                text-align: center !important;
+            }
+
+            .cs-menu td {
+                /* width: 1% !important; */
+            }
+
+            .cs-adaptive table,
+            .cs-btn-fw,
+            .cs-btn-fw-brdr,
+            .ft-left,
+            .ft-right {
+                width: 100% !important;
+            }
+
+            .cs-content table,
+            .cs-header table,
+            .cs-footer table,
+            .cs-content,
+            .cs-footer,
+            .cs-header {
+                width: 100% !important;
+                max-width: 600px !important;
+                /* display: none; */
+            }
+
+            .adapt-img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .cs-m-p0 {
+                padding: 0px !important;
+            }
+
+            .cs-m-p0r {
+                padding-right: 0px !important;
+            }
+
+            .cs-m-p0l {
+                padding-left: 0px !important;
+            }
+
+            .cs-m-p0t {
+                padding-top: 0px !important;
+            }
+
+            .cs-m-p0b {
+                padding-bottom: 0px !important;
+            }
+
+            .cs-m-p20b {
+                padding-bottom: 20px !important;
+            }
+
+            .cs-adapt-td {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .cs-mobile-hidden,
+            .cs-hidden {
+                display: none !important;
+            }
+
+            tr.desk-hide,
+            td.desk-hide,
+            table.desk-hide {
+                width: auto !important;
+                overflow: visible !important;
+                float: none !important;
+                max-height: inherit !important;
+                line-height: inherit !important;
+            }
+
+            tr.desk-hide {
+                display: table-row !important;
+            }
+
+            table.desk-hide {
+                display: table !important;
+            }
+
+            .desk-hide {
+                display: table-row !important;
+                width: auto !important;
+                overflow: visible !important;
+                max-height: inherit !important;
+            }
+
+            td.cs-desk-menu-hidden {
+                display: table-cell !important;
+            }
+
+            table.cs-table-not-adapt,
+            .csd-block-html table {
+                width: auto !important;
+            }
+
+            table.cs-social {
+                display: inline-block !important;
+            }
+
+            table.cs-social td {
+                display: inline-block !important;
+            }
+
+            *[class="gmail-fix"] {
+                display: none !important;
+            }
+        }
     </style>
-  <![endif]-->
+    <!--[if (mso 16)]>
+    <style type="text/css">
+        a {text-decoration: none;}
+        </style>
+        <![endif]-->
+    <!--[if gte mso 9]><style>sup {font-size: 100% !important;}</style><![endif]-->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG></o:AllowPNG>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+	</title>
+    <![endif]-->
 
-  <!--[if (gte mso 9)|(IE)]>
-  <xml>
-    <o:OfficeDocumentSettings>
-      <o:AllowPNG/>
-      <o:PixelsPerInch>96</o:PixelsPerInch>
-  </o:OfficeDocumentSettings>
-  </xml>
-  <![endif]-->
 </head>
 
-<body style="Margin:0;padding:0;min-width:100%;background-color:#dde0e1;">
+<body>
+    <table dir="ltr" class="pm-0-color">
+        <!--[if gte mso 9]>
+			<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+				<v:fill type="tile" color="#fafafa"></v:fill>
+			</v:background>
+		<![endif]-->
+        <table class="pm-0" width="100%" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td class="csd-email-paddings" valign="top">
+                        <table cellpadding="0" cellspacing="0" class="cs-header" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="cs-adaptive" align="center">
+                                        <table class="cs-header-body" style="background-color: #1dcfcf;" width="600"
+                                            cellspacing="0" cellpadding="0" bgcolor="#563da3" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <!-- левая колонка -->
+                                                    <td class="csd-structure cs-p10t cs-p40b cs-p20r cs-p20l"
+                                                        style="background-color: #1dcfcf;" bgcolor="#563da3"
+                                                        align="left">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
+                                                        <table class="ft-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="cs-m-p20b csd-container-frame"
+                                                                        width="270" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="csd-block-image cs-m-p0l "
+                                                                                        align="left"
+                                                                                        style="font-size:0">
+                                                                                        <a href="#" target="_blank">
+                                                                                            <img src="https://seeklogo.com/images/L/lorem-lorem-logo-EFC176EF00-seeklogo.com.png"
+                                                                                                alt="lorem-logo"
+                                                                                                style="display: block;"
+                                                                                                width="183">
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <!-- правая колонка -->
+                                                    <td class="csd-structure cs-p30t cs-p20b cs-p20r cs-p20l">
+                                                        <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
+                                                        <table class="ft-right" cellspacing="0" cellpadding="0"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="csd-container-frame" width="270"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="csd-block-button cs-p10t "
+                                                                                        align="right">
+                                                                                        <span class="btn-border">
+                                                                                            <a href="#" class="btn"
+                                                                                                target="_blank">Lorem
+                                                                                                ipsum</a>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
 
-  <!--[if (gte mso 9)|(IE)]>
-      <style type="text/css">
-         body {background-color: #dde0e1!important;}
-         body, table, td, p, a {font-family: sans-serif, Arial, Helvetica!important;}
-      </style>
-   <![endif]-->
+                                        </table>
+                                </tr>
 
-  <center style="width: 100%;table-layout:fixed;background-color: #dde0e1;padding-top: 40px;padding-bottom: 40px;">
-    <div style="max-width: 600px;background-color: #fafdfe;box-shadow: 0 0 10px rgba(0, 0, 0, .2);">
-
-      <!-- Preheader (remove comment) -->
-      <div
-        style="font-size: 0px;color: #fafdfe;line-height: 1px;mso-line-height-rule:exactly;display: none;max-width: 0px;max-height: 0px;opacity: 0;overflow: hidden;mso-hide:all;">
-        Стартовое описание письма
-      </div>
-      <!-- End Preheader (remove comment) -->
-
-      <!--[if (gte mso 9)|(IE)]>
-        <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-          style="color:#1C1E23;">
-        <tr>
-        <td>
-      <![endif]-->
-
-      <!-- оболочка всей таблицы -->
-      <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-        style="color:#1C1E23;font-family: 'Poppins',sans-serif, Arial, Helvetica;background-color: #fafdfe;Margin:0;padding:0;width: 100%;max-width: 600px;">
-        <!-- logo -->
-        <tr>
-          <td>
-            <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
-              <tr>
-                <td style="padding:19px 0 19px 0; text-align: center;">
-                  <a href="https://google.com" target="_blank"><img src="logo.png" alt="logo" border="0" width="50"></a>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- end logo -->
-
-        <!-- decor -->
-        <tr>
-          <td>
-            <div style="height: 1px; background-color: #999;"></div>
-          </td>
-        </tr>
-        <!-- end decor -->
-
-        <!-- hero -->
-
-        <tr>
-          <td style="padding:0px 24px 25px 24px;">
-            <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-              <tr>
-                <td style="padding:19px 0 10px 0; ">
-                  <p style="color:#666; margin:0; line-height: 1;">subtitle</p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:0 0 25px 0;">
-                  <h1 style="margin:0; font-size: 40px; line-height: 1;">Main Title</h1>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:0 0 19px 0; text-align: center;">
-                  <img src="hero-image.png" alt="hero-image" border="0" width="100%" width="552">
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding:0px 0 10px 0; text-align: center;">
-                  <p style="margin:0; font-size: 18px; line-height:1;">Image label</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:10px 0 25px 0;">
-                  <p style="margin:0; font-size: 14px; line-height:1; color:#666">Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit. Distinctio iure odio maiores delectus, tempore debitis quis, ea ut
-                    sunt dolores dolorem officiis sit quidem harum pariatur laboriosam ad eligendi dolor. Lorem ipsum,
-                    dolor sit amet consectetur adipisicing elit. Distinctio iure odio maiores delectus, tempore debitis
-                    quis, ea ut sunt dolores dolorem officiis sit quidem harum pariatur laboriosam ad eligendi dolor.
-                  </p>
-                </td>
-              </tr>
-
-              <!-- нормально кнопку можно сделать с помощью еще одной вложенной таблицы -->
-              <tr>
-                <td>
-                  <table align="left" border="0" cellspacing="0" cellpadding="0" role="presentation">
-                    <tr>
-                      <td style="text-align: center; background-color: #61c4eb; border-radius: 7px;">
-                        <a href="#" target="_blank"
-                          style="display:inline-block;  background-color: #61c4eb; color:#fff; font-weight:600;line-height: 20px; text-decoration: none; padding:8px 16px 8px 16px; border-radius: 7px;">
-                          &nbsp;&nbsp;&nbsp;&nbsp;КНОПКА&nbsp;&nbsp;&nbsp;&nbsp;
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-
-            </table>
-          </td>
-        </tr>
-
-        <!-- end hero -->
-
-        <!-- popylar -->
-
-        <tr>
-          <td style="padding:0px 24px 25px 24px;">
-            <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-              <tr>
-                <td style="padding:10px 0 25px 0">
-                  <h2 style="margin:0; color:#1c1c23; font-size: 30px; line-height: 36px;">Title Popular Wordpress
-                    Plugins</h2>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <tr>
-          <td align="center" style="padding:0 24px 0 24px; font-size:0;" class="mobile-padding two-columns">
-            <!--[if (gte mso 9)|(IE)]>
-             <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-              <tr>
-               <td>
-            <![endif]-->
-            <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-              style="vertical-align: top; width: 100%; max-width:276px; display: inline-block;" class="column">
-              <tr>
-                <td style="padding:32px 8px 16px 8px;" class="mobile-col-padding">
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: left;">
-                    <tr>
-                      <td style="padding:0 0 9px 0;">
-                        <img src="1.png" alt="icons" border="0" width="260" style="max-width:260px;">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0 0 16px 0;">
-                        <h3 style="margin:0; font-size: 30px; line-height: 36px; color:#111;">
-                          Rubicon
-                        </h3>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p style="margin:0; color:#61c4eb; font-size: 16px; font-weight: 500; line-height: 24px;">
-                          $1000
-                        </p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <table align="left" border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td style="text-align: center; background-color: #61c4eb; border-radius: 7px;">
-                              <a href="#" target="_blank"
-                                style="display:inline-block;  background-color: #61c4eb; color:#fff; font-weight:600;line-height: 20px; text-decoration: none; padding:8px 16px 8px 16px; border-radius: 7px;">
-                                &nbsp;&nbsp;&nbsp;&nbsp;Buy&nbsp;&nbsp;&nbsp;&nbsp;
-                              </a>
-                            </td>
-                          </tr>
                         </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-            <!--[if (gte mso 9)|(IE)]>
-             </td>
-             <td>
-            <![endif]-->
-            <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-              style="vertical-align: top; width: 100%; max-width:276px; display: inline-block;" class="column">
-              <tr>
-                <td style="padding:32px 8px 16px 8px;" class="mobile-col-padding">
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: left;">
-                    <tr>
-                      <td style="padding:0 0 9px 0;">
-                        <img src="hero-image.png" alt="icons" border="0" width="260" height="260px;"
-                          style="max-width:260px;">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0 0 9px 0;">
-                        <h3 style="margin:0; font-size: 30px; line-height: 36px; color:#111;">
-                          Camera
-                        </h3>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p style="margin:0; color:#61c4eb; font-size: 16px; font-weight: 500; line-height: 24px;">
-                          $100
-                        </p>
-                      </td>
-                    </tr>
 
-                    <tr>
-                      <td>
-                        <table align="left" border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td style="text-align: center; background-color: #61c4eb; border-radius: 7px;">
-                              <a href="#" target="_blank"
-                                style="display:inline-block;  background-color: #61c4eb; color:#fff; font-weight:600;line-height: 20px; text-decoration: none; padding:8px 16px 8px 16px; border-radius: 7px;">
-                                &nbsp;&nbsp;&nbsp;&nbsp;Buy&nbsp;&nbsp;&nbsp;&nbsp;
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-
-            <!--[if (gte mso 9)|(IE)]>
-           </td>
-          </tr>
+                    </td>
+                </tr>
+            </tbody>
         </table>
-            <![endif]-->
-
-          </td>          
-        </tr>
-
-        <tr>
-          <td align="center" style="padding:0 24px 0 24px; font-size:0;" class="mobile-padding two-columns">
-            <!--[if (gte mso 9)|(IE)]>
-             <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-              <tr>
-               <td>
-            <![endif]-->
-            <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-              style="vertical-align: top; width: 100%; max-width:276px; display: inline-block;" class="column">
-              <tr>
-                <td style="padding:32px 8px 16px 8px;" class="mobile-col-padding">
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: left;">
-                    <tr>
-                      <td style="padding:0 0 9px 0;">
-                        <img src="1.png" alt="icons" border="0" width="260" style="max-width:260px;">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0 0 16px 0;">
-                        <h3 style="margin:0; font-size: 30px; line-height: 36px; color:#111;">
-                          Rubicon
-                        </h3>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p style="margin:0; color:#61c4eb; font-size: 16px; font-weight: 500; line-height: 24px;">
-                          $1000
-                        </p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <table align="left" border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td style="text-align: center; background-color: #61c4eb; border-radius: 7px;">
-                              <a href="#" target="_blank"
-                                style="display:inline-block;  background-color: #61c4eb; color:#fff; font-weight:600;line-height: 20px; text-decoration: none; padding:8px 16px 8px 16px; border-radius: 7px;">
-                                &nbsp;&nbsp;&nbsp;&nbsp;Buy&nbsp;&nbsp;&nbsp;&nbsp;
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-            <!--[if (gte mso 9)|(IE)]>
-             </td>
-             <td>
-            <![endif]-->
-            <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-              style="vertical-align: top; width: 100%; max-width:276px; display: inline-block;" class="column">
-              <tr>
-                <td style="padding:32px 8px 16px 8px;" class="mobile-col-padding">
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="text-align: left;">
-                    <tr>
-                      <td style="padding:0 0 9px 0;">
-                        <img src="hero-image.png" alt="icons" border="0" width="260" height="260px;"
-                          style="max-width:260px;">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0 0 9px 0;">
-                        <h3 style="margin:0; font-size: 30px; line-height: 36px; color:#111;">
-                          Camera
-                        </h3>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p style="margin:0; color:#61c4eb; font-size: 16px; font-weight: 500; line-height: 24px;">
-                          $100
-                        </p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <table align="left" border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td style="text-align: center; background-color: #61c4eb; border-radius: 7px;">
-                              <a href="#" target="_blank"
-                                style="display:inline-block;  background-color: #61c4eb; color:#fff; font-weight:600;line-height: 20px; text-decoration: none; padding:8px 16px 8px 16px; border-radius: 7px;">
-                                &nbsp;&nbsp;&nbsp;&nbsp;Buy&nbsp;&nbsp;&nbsp;&nbsp;
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-
-            <!--[if (gte mso 9)|(IE)]>
-           </td>
-          </tr>
-        </table>
-            <![endif]-->
-
-          </td>
-        </tr>
-        <!--end popylar -->
-
-        <!-- footer -->
-        <tr>
-          <td style="padding:0 24px 25px 24px;">
-            <table style="width: 100%;" border="0" cellspacing="0" cellpadding="0" role="presentation">
-              <tr>
-                <td style="padding:24px 0px 10px 0px;">
-                  <div style="height: 1px; width:100%; background-color:#999;"></div>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:15px 0 15px 0; text-align: center;">
-                  <p style="margin:0; font-size: 12px; font-weight: 400; line-height: 20px; text-align: center;">
-                    Dugimails. All rights reserved</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p style="margin:0; font-size: 12px; text-align: center; color:darkgrey;">
-                    Lorem ipsum, dolor sit amet. <a href="#" target="_blank"
-                      style="color:#61c4eb; text-decoration:none;">Link-Link.com</a> Temporibus, nisi.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="padding:0 24px 0 24px; font-size: 0;" class="fourth-columns">
-                  <!--[if (gte mso 9)|(IE)]>
-             <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-              <tr>
-               <td>
-            <![endif]-->
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-                    style="vertical-align: middle; width: 100%; max-width:26px; display: inline-block;" class="column">
-                    <tr>
-                      <td style="padding:4px 4px 4px 4px;">
-                        <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td>
-                              <a href="#" target="_blank">
-                                <img src="insta.png" alt="social-icon" border="0" width="18" style="max-width:18px;" />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!--[if (gte mso 9)|(IE)]>
-                       </td>
-                       <td>
-                        <![endif]-->
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-                    style="vertical-align: middle; width: 100%; max-width:26px; display: inline-block;" class="column">
-                    <tr>
-                      <td style="padding:4px 4px 4px 4px;">
-                        <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td>
-                              <a href="#" target="_blank">
-                                <img src="tw.png" alt="social-icon" border="0" width="18" style="max-width:18px;" />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!--[if (gte mso 9)|(IE)]>
-                           </td>
-                           <td>
-                            <![endif]-->
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-                    style="vertical-align: middle; width: 100%; max-width:26px; display: inline-block;" class="column">
-                    <tr>
-                      <td style="padding:4px 4px 4px 4px;">
-                        <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td>
-                              <a href="#" target="_blank">
-                                <img src="linked.png" alt="social-icon" border="0" width="18" style="max-width:18px;" />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!--[if (gte mso 9)|(IE)]>
-                               </td>
-                               <td>
-                                <![endif]-->
-                  <table border="0" cellspacing="0" cellpadding="0" role="presentation"
-                    style="vertical-align: middle; width: 100%; max-width:26px; display: inline-block;" class="column">
-                    <tr>
-                      <td style="padding:4px 4px 4px 4px;">
-                        <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-                          <tr>
-                            <td>
-                              <a href="#" target="_blank">
-                                <img src="fb.png" alt="social-icon" border="0" width="18" style="max-width:18px;" />
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!--[if (gte mso 9)|(IE)]>
-                                   </td>
-                                  </tr>
-                                </table>
-                                    <![endif]-->
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <!-- end footer -->
-
-
-      </table>
-
-      <!--[if (gte mso 9)|(IE)]>
         </td>
         </tr>
-        </table>
-      <![endif]-->
+        </tbody>
+    </table>
+    <table class="cs-content" cellspacing="0" cellpadding="0" align="center">
+        <tbody>
+            <tr>
+                <td style="background-color: #fafafa;" bgcolor="#fafafa" align="center">
+                    <table class="cs-content-body" style="background-color: #ffffff;" width="600px" cellspacing="0"
+                        cellpadding="0" bgcolor="#ffffff" align="center">
+                        <tbody>
+                            <tr>
+                                <td class="csd-structure cs-p40t cs-p20r cs-p20l"
+                                    style="background-color: transparent; background-position: left top;"
+                                    bgcolor="transparent" align="left">
+                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="csd-container-frame" width="560" valign="top" align="center">
+                                                    <table style="background-position: left top;" width="100%"
+                                                        cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="csd-block-image cs-p5t cs-p5b" align="center"
+                                                                    style="font-size:0"><a target="_blank"><img
+                                                                            src="https://media.istockphoto.com/id/1381901281/vector/graduate-people-students-celebrate-success-graduation-happy-girl-holding-degree-diploma.jpg?s=612x612&w=0&k=20&c=1U5O9A2zAqYLRyNA2wYqnkgXGqfgSRvwgcnQ0nnv4vs="
+                                                                            alt="main-image" style="display: block;"
+                                                                            width="240"></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="csd-block-text cs-p15t cs-p15b"
+                                                                    align="center">
+                                                                    <h1 style="color: #333333; font-size: 20px;">
+                                                                        <strong>Sit amet facilisis magna etiam
+                                                                            tempor.
+                                                                    </h1>
+                                                                    <h1 style="color: #333333; font-size: 20px;">
+                                                                        <strong>Id eu nisl nunc mi.</strong>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="csd-block-text cs-p40r cs-p40l" align="left">
+                                                                    <p style="text-align: center;">Massa eget
+                                                                        egestas purus viverra.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="csd-block-text cs-p35r cs-p40l" align="left">
+                                                                    <p style="text-align: center;">Augue eget arcu
+                                                                        dictum varius duis.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="csd-block-text cs-p25t cs-p40r cs-p40l"
+                                                                    align="right">
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur
+                                                                        adipiscing elit, sed do eiusmod tempor
+                                                                        incididunt ut labore et dolore magna aliqua.
+                                                                        Ut enim ad minim veniam, quis nostrud
+                                                                        exercitation ullamco laboris nisi ut aliquip
+                                                                        ex ea commodo consequat.</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="csd-block-button cs-p40t cs-p40b cs-p10r cs-p10l"
+                                                                    align="center"><span class="btn-border"><a href="#"
+                                                                            class="btn" target="_blank">Lorem ipsum
+                                                                            dolor</span></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="csd-structure cs-p10r cs-p10l" style="background-position: center center;"
+                                    align="left">
+                                    <!--[if mso]>
+                                        <table width="580" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="199" valign="top">
+                                    <![endif]-->
+                                    <table class="ft-left" cellspacing="0" cellpadding="0" align="left">
+                                        <tbody>
+                                            <tr>
+                                                <td class="csd-container-frame" width="199" align="left">
+                                                    <table style="background-position: center center;" width="100%"
+                                                        cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="csd-block-text cs-p15t cs-m-txt-c"
+                                                                    align="right">
+                                                                    <p style="font-size: 16px; color: #666666;">
+                                                                        <strong>Dignissim:
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--[if mso]>
+                                    </td><td width="20"></td>
+                                    <td width="361" valign="top">
+                                        <![endif]-->
+                                    <table class="ft-right" cellspacing="0" cellpadding="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td class="csd-container-frame" width="361" align="center">
+                                                    <table style="background-position: center center;" width="100%"
+                                                        cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="csd-block-social cs-p10t cs-p5b cs-m-txt-c"
+                                                                    align="center" style="font-size:0">
+                                                                    <table class="cs-table-not-adapt cs-social"
+                                                                        cellspacing="0" cellpadding="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="cs-p10r" valign="top"
+                                                                                    align="center"><a target="_blank"
+                                                                                        href="#"><img
+                                                                                            src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
+                                                                                            alt="Fb" title="Facebook"
+                                                                                            width="32"></a></td>
+                                                                                <td class="cs-p10r" valign="top"
+                                                                                    align="center"><a target="_blank"
+                                                                                        href="#"><img
+                                                                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Coast_twitter.png/640px-Coast_twitter.png"
+                                                                                            alt="Tw" title="Twitter"
+                                                                                            width="32"></a></td>
+                                                                                <td class="cs-p10r" valign="top"
+                                                                                    align="center"><a target="_blank"
+                                                                                        href="#"><img
+                                                                                            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                                                                            alt="Ig" title="Instagram"
+                                                                                            width="32"></a></td>
+                                                                                <td class="cs-p10r" valign="middle"
+                                                                                    align="center"><a target="_blank"
+                                                                                        href="#"><img
+                                                                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
+                                                                                            alt="Yt" title="Youtube"
+                                                                                            width="32"></a></td>
+                                                                                <td class="cs-p10r" valign="top"
+                                                                                    align="center"><a target="_blank"
+                                                                                        href="#"><img
+                                                                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Linkedin-web-vt.png/640px-Linkedin-web-vt.png"
+                                                                                            alt="In" title="Linkedin"
+                                                                                            width="32"></a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--[if mso]>
+                                    </td>
+                                </tr>
+                            </table>
+                            <![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="csd-structure cs-p5t cs-p20b cs-p20r cs-p20l"
+                                    style="background-position: left top;" align="left">
+                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="csd-container-frame" width="560" valign="top" align="center">
+                                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="csd-block-text" align="center">
+                                                                    <p style="font-size: 14px;">Id diam maecenas: <a
+                                                                            target="_blank"
+                                                                            style="font-size: 14px; color: #666666;"
+                                                                            href="tel:123456789">123456789</a> | <a
+                                                                            target="_blank"
+                                                                            href="mailto:example@example.com"
+                                                                            style="font-size: 14px; color: #666666;">example@example.com</a>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+            </tr>
+            </td>
+    </table>
+    </tbody>
+    </table>
 
-    </div>
-  </center>
+    <table class="cs-footer" cellspacing="0" cellpadding="0" align="center">
+        <tbody>
+            <tr>
+                <td style="background-color: #fafafa;" bgcolor="#fafafa" align="center">
+                    <table class="cs-footer-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
+                        align="center">
+                        <tbody>
+                            <tr>
+                                <td class="csd-structure cs-p20t cs-p30b cs-p20r cs-p20l"
+                                    style=" background-color: #1dcfcf; background-position: left top;" bgcolor="#1dcfcf"
+                                    align="left">
+                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="csd-container-frame" width="560" valign="top" align="center">
+                                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="csd-block-text cs-p5t cs-p5b" align="left">
+                                                                    <h2 style="font-size: 16px; color: #333333;">
+                                                                        <strong>Ornare suspendisse?</strong>
+                                                                    </h2>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="csd-block-text cs-p5b" align="left">
+                                                                    <p style="font-size: 14px; color: #333333;">
+                                                                        Faucibus turpis in eu mi bibendum neque egestas
+                                                                        <a target="_blank"
+                                                                            style="font-size: 14px; color: #333333; text-decoration: none;">congue
+                                                                            quisque</a>.
+                                                                    </p>
+                                                                    <p style="font-size: 14px; color: #333333;">A
+                                                                        pellentesque sit amet porttitor eget dolor morbi
+                                                                        <a target="_blank"
+                                                                            style="font-size: 14px; text-decoration: none; color: #333333;">non
+                                                                            arcu</a>.<br>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </tr>
+                </td>
+        </tbody>
+    </table>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="cs-content" cellspacing="0" cellpadding="0" align="center">
+        <tbody>
+            <tr>
+                <td style="background-color: #fafafa;" bgcolor="#fafafa" align="center">
+                    <table class="cs-content-body" style="background-color: transparent;" width="600" cellspacing="0"
+                        cellpadding="0" bgcolor="transparent" align="center">
+                        <table class="cs-footer" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="csd-structure cs-p30t" style="background-position: left top;"
+                                        align="center">
+                                        <table width="600" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="csd-container-frame" width="600" valign="top"
+                                                        align="center">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="csd-block-menu">
+                                                                        <table class="cs-menu" width="600"
+                                                                            cellspacing="0" cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr class="links">
+                                                                                    <td class="cs-p10t cs-p10b cs-p5r cs-p5l"
+                                                                                        style="padding-bottom: 1px; padding-top: 0px;"
+                                                                                        width="33%" valign="top"
+                                                                                        bgcolor="transparent"
+                                                                                        align="center"><a
+                                                                                            target="_blank" href="#"
+                                                                                            style="color: #563da3; font-size: 14px;">A
+                                                                                            iaculis</a>
+                                                                                    </td>
+                                                                                    <td class="cs-p10t cs-p10b cs-p5r cs-p5l"
+                                                                                        style="border-left: 1px solid #563da3; padding-bottom: 1px; padding-top: 0px;"
+                                                                                        width="33%" valign="top"
+                                                                                        bgcolor="transparent"
+                                                                                        align="center"><a
+                                                                                            target="_blank" href="#"
+                                                                                            style="color: #563da3; font-size: 14px;">Libero</a>
+                                                                                    </td>
+                                                                                    <td class="cs-p10t cs-p10b cs-p5r cs-p5l"
+                                                                                        style="border-left: 1px solid #563da3; padding-bottom: 1px; padding-top: 0px;"
+                                                                                        width="33%" valign="top"
+                                                                                        bgcolor="transparent"
+                                                                                        align="center"><a
+                                                                                            target="_blank" href="#"
+                                                                                            style="color: #563da3; font-size: 14px;">Euismod</a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="csd-block-spacer cs-p20b cs-p20r cs-p20l"
+                                                                        align="center" style="font-size:0">
+                                                                        <table width="100%" height="100%"
+                                                                            cellspacing="0" cellpadding="0" border="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td
+                                                                                        style="border-bottom: 1px solid #fafafa; background: none; height: 1px; width: 100%; margin: 0px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #fafafa;" bgcolor="#fafafa" align="center">
+                                        <table class="cs-footer-body" style="background-color: transparent;" width="600"
+                                            cellspacing="0" cellpadding="0" bgcolor="transparent" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="csd-structure cs-p15t cs-p35b cs-p20r cs-p20l"
+                                                        align="left">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="csd-container-frame" width="560"
+                                                                        valign="top" align="center">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="csd-block-text">
+                                                                                        <p
+                                                                                            style="font-size: 12px; color: #666666;">
+                                                                                            Quam nulla porttitor massa
+                                                                                            id neque. At elementum eu
+                                                                                            facilisis sed odio morbi
+                                                                                            quis <a target="_blank"
+                                                                                                style="font-size: 12px; text-decoration: underline;"
+                                                                                                class="unsubscribe">commodo</a>.
+                                                                                            A iaculis at erat
+                                                                                            pellentesque. Diam donec
+                                                                                            adipiscing tristique risus
+                                                                                            nec feugiat. Orci sagittis
+                                                                                            eu volutpat odio facilisis
+                                                                                            mauris sit. Euismod in
+                                                                                            pellentesque massa placerat.
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                            </tbody>
+                        </table>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </td>
+    </tr>
+    </tbody>
+    </table>
 
 </body>
 
